@@ -1,0 +1,23 @@
+# ============================================================
+#  NIDS — Python Dependencies
+#  Install with:  pip install -r requirements.txt
+#  Python 3.8 or higher recommended
+# ============================================================
+
+# Core data science
+numpy>=1.23.0
+pandas>=1.5.0
+scipy>=1.9.0
+
+# Machine learning
+scikit-learn>=1.2.0
+
+# Class imbalance fix
+imbalanced-learn>=0.10.0
+
+# SHAP explainability
+shap>=0.42.0
+
+# Plotting
+matplotlib>=3.6.0
+seaborn>=0.12.0

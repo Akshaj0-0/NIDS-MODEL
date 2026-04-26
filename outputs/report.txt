@@ -1,0 +1,85 @@
+============================================================
+  AI-BASED NETWORK INTRUSION DETECTION SYSTEM REPORT
+============================================================
+
+Dataset shape         : (406190, 12)
+Features used         : 9
+Train samples         : 324952
+Test samples          : 81238
+After SMOTE (train)   : 377818
+
+------------------------------------------------------------
+BINARY CLASSIFICATION (Normal vs Attack)
+------------------------------------------------------------
+Random Forest Accuracy : 95.89%
+Stacked Ensemble Acc   : 95.98%
+
+Stacked Ensemble — Classification Report:
+              precision    recall  f1-score   support
+
+      Normal       0.95      0.96      0.95     34011
+      Attack       0.97      0.96      0.97     47227
+
+    accuracy                           0.96     81238
+   macro avg       0.96      0.96      0.96     81238
+weighted avg       0.96      0.96      0.96     81238
+
+------------------------------------------------------------
+MULTI-CLASS ATTACK CATEGORY REPORT
+------------------------------------------------------------
+                 precision    recall  f1-score   support
+
+       Analysis       0.17      0.19      0.18       535
+       Backdoor       0.10      0.27      0.14       466
+            DoS       0.35      0.68      0.47      3271
+       Exploits       0.83      0.55      0.66      8905
+        Fuzzers       0.59      0.71      0.64      4849
+        Generic       1.00      0.98      0.99     11774
+         Normal       0.95      0.85      0.90     18600
+ Reconnaissance       0.87      0.79      0.83      2797
+      Shellcode       0.34      0.87      0.49       302
+          Worms       0.19      0.74      0.31        35
+        apache2       0.96      0.98      0.97       147
+           back       1.00      1.00      1.00       263
+buffer_overflow       0.67      0.80      0.73        10
+   guess_passwd       0.99      1.00      1.00       257
+     httptunnel       0.60      0.96      0.74        27
+        ipsweep       0.76      0.77      0.77       748
+       mailbomb       1.00      1.00      1.00        59
+          mscan       0.99      0.97      0.98       199
+        neptune       1.00      0.99      0.99      9174
+           nmap       0.47      0.48      0.47       313
+         normal       1.00      0.98      0.99     15411
+            pod       0.92      0.96      0.94        48
+      portsweep       0.90      0.91      0.91       618
+   processtable       1.00      1.00      1.00       137
+          saint       0.37      0.67      0.48        64
+          satan       0.87      0.87      0.87       874
+          smurf       1.00      1.00      1.00       662
+  snmpgetattack       0.16      0.94      0.28        36
+      snmpguess       1.00      1.00      1.00        66
+       teardrop       0.97      1.00      0.98       181
+    warezclient       0.98      0.99      0.99       178
+    warezmaster       0.76      0.99      0.86       193
+
+       accuracy                           0.85     81199
+      macro avg       0.74      0.84      0.77     81199
+   weighted avg       0.89      0.85      0.87     81199
+
+------------------------------------------------------------
+DRIFT DETECTION
+------------------------------------------------------------
+No significant drift detected.
+
+------------------------------------------------------------
+TOP 15 FEATURES BY IMPORTANCE
+------------------------------------------------------------
+dbytes          0.229264
+bytes_sent      0.133966
+dur             0.125183
+sbytes          0.122860
+ct_srv_dst      0.110831
+state           0.109828
+service         0.072697
+packet_count    0.058833
+proto           0.036538
